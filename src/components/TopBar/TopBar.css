@@ -1,0 +1,78 @@
+.TopB{
+    color:aqua;
+    font-size:20px;
+}
+
+.TopBar-container{
+    height:50px;
+    width:100%;
+    background-color: #1877f2;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+.TopBarLeft .logo{
+    font-size: 24px;
+    margin-left: 20px;
+    font-weight: bold;
+    color:white;
+    cursor: pointer;
+}
+.TopBarCenter .searchbar .topbarsearch{
+    width:100%;
+    height:30px;
+    margin-top: 8px;
+}
+.TopBarCenter .searchbar .topbarsearch .search{
+    cursor: pointer;
+}
+.TopBarRight{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.TopBarRight .topbarlinks{
+   
+    
+    
+}
+.TopBarRight .topbarlinks .topbarlink{
+     
+  
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: 400;
+}
+.TopBarRight .topbarIcons{
+    display: flex;
+    justify-content: center;
+}
+.TopBarRight .topbarIcons .topbarIconItem{
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.TopBarRight .topbarIcons .topbarIconItem .tobarIconBadge{
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    top: -5px;
+    right:-5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:9px;
+    font-weight: bold;
+}
+.topbarImg{
+    width:7%;
+    height:7%;
+    object-fit: cover;
+    cursor: pointer;
+}

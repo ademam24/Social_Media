@@ -1,6 +1,7 @@
 .TopB{
     color:aqua;
     font-size:20px;
+    
 }
 
 .TopBar-container{
@@ -9,7 +10,7 @@
     background-color: #1877f2;
     display: flex;
     align-items: center;
-    position: sticky;
+    
     top: 0;
 }
 .TopBarLeft .logo{

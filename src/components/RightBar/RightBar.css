@@ -1,0 +1,123 @@
+
+.RightBar-Wrapper{
+    padding: 20px 20px 0 0;
+    
+}
+.pageName{
+    font-weight: bold;
+    font-size: 15px;
+}
+.Pagedetail{
+    margin-top: 10px;
+    display: flex;  
+   align-items: center;
+}
+.pagecontainer .list-group :hover{
+    background-color: transparent !important;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+.pageIcon{
+    margin-right: 10px;
+    
+}
+.pagecontainer .list-group .list-group-item {
+    margin: 5px 0 0 20px;
+    color:#65676b;
+    font-size: 12px;
+   
+}
+.pagecontainer .list-group .list-group-item :hover{
+    border-radius: 0;
+   
+   
+  
+}
+
+.pageImg{
+    width:34px;
+    height:34px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.birthdayContainer{
+    cursor: pointer;
+    display: flex;
+    
+    flex-direction: column;
+}
+.BirthImg{
+    width:32px;
+    height:32px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+.BirthHead{
+    font-size: 18px;
+  font-weight: bold;
+  color: #65676b;
+}
+.BirthContainer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height:70px;
+    padding: 10px;
+}
+.BirthContainer:hover{
+    background-color:#e5e7ec ;
+    width: 100%;
+    height:70px;
+    border-radius: 5px;
+}
+.birthText{
+    font-size: 15px;
+    font-weight: 300;
+}
+.adImg{
+    margin: 10px 0;
+    border-radius: 10px;
+    width:100%;
+    cursor: pointer;
+}
+.rightbarProfileContainerContainer{
+    position: relative;
+}
+
+.rightbarTitle{
+    color:#65676b;
+    font-weight: bold;
+    font-size: 18px;
+}
+.profileImg{
+    width:32px;
+    height:32px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+.rightbarProfileContainerContainer::after{
+    content: " ";
+    width:10px;
+    height: 10px;
+    background-color: #03a903;
+    position: absolute;
+    bottom:-1px;
+    left:22px;
+    border-radius: 50%;;
+}
+.profileName{
+    margin-left: 10px;
+}
+.list-group :hover{
+    color: black !important;
+    background-color:#e5e7ec  !important;
+    border-radius: 5px;
+}
+.pageTitle{
+    color:#65676b;
+    font-weight: bold;
+    font-size: 18px;
+}

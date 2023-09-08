@@ -9,7 +9,7 @@ import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import ShareIcon from '@mui/icons-material/Share';
 
 export default function Post(props) {
-   
+    console.log("Hello");
   return (
     <div className="Post">
         <div className="postwrapper">

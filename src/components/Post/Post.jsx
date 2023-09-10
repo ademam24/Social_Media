@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Post.css';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import PublicIcon from '@mui/icons-material/Public';
@@ -7,19 +7,23 @@ import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import ShareIcon from '@mui/icons-material/Share';
+import {Users} from "../../DammyData";
 
 export default function Post(props) {
-    console.log("Hello");
+
+
+  const User = Users.filter(user=> user.id=== props.post.userId); //everyTime overwrite on array to be index 0 when you launch component
+  // console.log(User[0].username)
   return (
     <div className="Post">
         <div className="postwrapper">
             <div className="PostTop">
                 <div className="PostTopLeft">
-                    <img src={props.link} className='PostImag' alt=""/>
+                    <img src={User[0].profilePicture} className='PostImag' alt=""/>
                     <div className="psotDetails">
-                    <span className='PostName'>{props.name}</span>
+                    <span className='PostName'>{User[0].username}</span>
                     <div className="PostInfo">
-                    <span className="PostDate">5 min</span>
+                    <span className="PostDate">{props.post.date}</span>
                     <PublicIcon className='publicIcon'/>
                     </div>
 
@@ -31,8 +35,8 @@ export default function Post(props) {
                 </div>
             </div>
             <div className="PostCenter">
-                <span className="postcentertext">Changing your behavior</span>
-                <img src= {props.src} className='CeneterImage' alt=""/>
+                <span className="postcentertext">{props.post?.desc}</span>
+                <img src={props.post.photo} className='CeneterImage' alt=""/>
             </div>
             <div className="PostBottom">
                

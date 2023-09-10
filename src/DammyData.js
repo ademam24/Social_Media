@@ -1,7 +1,7 @@
 export const Users = [
     {
       id:1,
-      profilePicture: "assets/persons/1.jpeg",
+      profilePicture: "assets/persons/0.jpeg",
       username: "Safak Kocaoglu",
     },
     {
@@ -46,7 +46,7 @@ export const Users = [
     },
     {
       id:10,
-      profilePicture: "assets/persons/1.jpeg",
+      profilePicture: "assets/persons/0.jpeg",
       username: "Safak Kocaoglu",
     },
   ];
@@ -72,7 +72,7 @@ export const Users = [
     {
       id: 3,
       desc: "Every moment is a fresh beginning.",
-      photo: "assets/post/3.jfif",
+      photo: "assets/post/3.jpeg",
       date: "1 hour ago",
       userId: 3,
       like: 61,
@@ -88,7 +88,7 @@ export const Users = [
     },
     {
       id: 5,
-      photo: "assets/post/5.jfif",
+      photo: "assets/post/5.jpeg",
       date: "5 hours ago",
       userId: 5,
       like: 23,
@@ -96,7 +96,7 @@ export const Users = [
     },
     {
       id: 6,
-      photo: "assets/post/6.avif",
+      photo: "assets/post/1.jpg",
       date: "1 day ago",
       userId: 6,
       like: 44,

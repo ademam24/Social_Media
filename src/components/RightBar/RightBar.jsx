@@ -4,8 +4,15 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import CampaignIcon from '@mui/icons-material/Campaign';
 import CameraswitchIcon from '@mui/icons-material/Cameraswitch';
+import { Users } from '../../DammyData';
 
 export default function RightBar(props) {
+
+//  const user = Users.map(u =>(
+//    u= u.profilePicture
+//  ));
+//   console.log(user)
+
   return (
      <div className="RightBar">
       <div className="RightBar-Wrapper">
@@ -45,48 +52,17 @@ export default function RightBar(props) {
           <hr/>
           <h4 className="rightbarTitle">Online Contacts</h4>
           <ListGroup>
-            <ListGroup.Item className='rightbarFriend'>
-              <div className="rightbarProfileContainerContainer">
-                <img className='profileImg' src="assets/persons/5.jpeg"/>
-                <span className='profileName'>Alia Mohmed</span>
-              </div>
-            </ListGroup.Item>
-            <ListGroup.Item className='rightbarFriend'>
-              <div className="rightbarProfileContainerContainer">
-                <img className='profileImg' src="assets/persons/9.jpeg"/>
-                <span className='profileName'>Lila Ahmed</span>
-              </div>
-            </ListGroup.Item>
-            <ListGroup.Item className='rightbarFriend'>
-              <div className="rightbarProfileContainerContainer">
-                <img className='profileImg' src="assets/persons/4.jpeg"/>
-                <span className='profileName'>Nevieen Moh</span>
-              </div>
-            </ListGroup.Item>
-            <ListGroup.Item className='rightbarFriend'>
-              <div className="rightbarProfileContainerContainer">
-                <img className='profileImg' src="assets/persons/7.jpeg"/>
-                <span className='profileName'>Sara Ali</span>
-              </div>
-            </ListGroup.Item>
-            <ListGroup.Item className='rightbarFriend'>
-              <div className="rightbarProfileContainerContainer">
-                <img className='profileImg' src="assets/persons/2.jpeg"/>
-                <span className='profileName'>FeFy Abdo</span>
-              </div>
-            </ListGroup.Item>
-            <ListGroup.Item className='rightbarFriend'>
-              <div className="rightbarProfileContainerContainer">
-                <img className='profileImg' src="assets/persons/8.jpeg"/>
-                <span className='profileName'>Noran Said</span>
-              </div>
-            </ListGroup.Item>
-            <ListGroup.Item className='rightbarFriend'>
-              <div className="rightbarProfileContainerContainer">
-                <img className='profileImg' src="assets/persons/6.jpeg"/>
-                <span className='profileName'>Salima Selim</span>
-              </div>
-            </ListGroup.Item>
+              {
+                 Users.map(u=>(
+                  <ListGroup.Item className='rightbarFriend'>
+                  <div className="rightbarProfileContainerContainer">
+                    <img className='profileImg' src={u.profilePicture}/>
+                    <span className='profileName'>{u.username}</span>
+                  </div>
+                </ListGroup.Item>
+                 ))
+              }
+
            
             
           </ListGroup>

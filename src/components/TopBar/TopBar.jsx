@@ -14,7 +14,7 @@ import Container from 'react-bootstrap/Container';
 
 export default function TopBar() {
   return (
-    <Container fluid>
+    <Container fluid className='Contain'>
      <Row >
      <div className='TopBar-container' >
       <Col md={3}> 

@@ -10,13 +10,10 @@ export default function () {
     <div className="Feed">
       <div className="feedwrapper">
         <Share/>
-        <Post src="assets/Profile/4.avif" name="Jone Deb" link="/assets/Persons/5.jpeg"/>
-      <Post src="assets/Profile/1.jpg" name="Yara Yasser" link="/assets/Persons/3.jpeg"/>
-        <Post src="assets/Profile/3.jpeg" name="Dalia Ahmed" link="/assets/Persons/4.jpeg"/>
-        <Post src="assets/Profile/2.jpg" name="Noran Ali" link="/assets/Persons/5.jpeg"/>
-        <Post src="assets/Profile/5.jpeg" name="Sara Adel" link="/assets/Persons/6.jpeg"/> 
-         
-       
+       {Posts.map((p)=>( 
+         <Post key={p.id} post={p}/>     
+  ))} 
+  
      
       </div>
     </div>

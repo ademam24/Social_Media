@@ -10,6 +10,7 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import EventIcon from '@mui/icons-material/Event';
 import SchoolIcon from '@mui/icons-material/School';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
+import {Users} from "../../DammyData";
 
 
 
@@ -92,46 +93,13 @@ export default function () {
     <button  ref={ref} className='sidebarButton' > Show More </button>
       <hr className='sidebarHr'/>
       <ListGroup as="ul" ref={list} className='sidebarFriendList' >
-          <ListGroup.Item as="li" className='sidebarFreind'>
-            <img className='sidebarFriendImg' src="/assets/persons/0.jpeg"/>
-            <span className='sidebarFreindName'> Jone Deb</span>
-          </ListGroup.Item>
-          <ListGroup.Item as="li" className='sidebarFreind'>
-            <img className='sidebarFriendImg' src="/assets/persons/2.jpeg"/>
-            <span className='sidebarFreindName'> Jone Deb</span>
-          </ListGroup.Item>
-          <ListGroup.Item as="li" className='sidebarFreind'>
-            <img className='sidebarFriendImg' src="/assets/persons/3.jpeg"/>
-            <span className='sidebarFreindName'> Jone Deb</span>
-          </ListGroup.Item>
-          <ListGroup.Item as="li" className='sidebarFreind'>
-            <img className='sidebarFriendImg' src="/assets/persons/4.jpeg"/>
-            <span className='sidebarFreindName'> Jone Deb</span>
-          </ListGroup.Item>
-          <ListGroup.Item as="li" className='sidebarFreind'>
-            <img className='sidebarFriendImg' src="/assets/persons/5.jpeg"/>
-            <span className='sidebarFreindName'> Jone Deb</span>
-          </ListGroup.Item>
-          <ListGroup.Item as="li" className='sidebarFreind'>
-            <img className='sidebarFriendImg' src="/assets/persons/8.jpeg"/>
-            <span className='sidebarFreindName'> Jone Deb</span>
-          </ListGroup.Item>
-          <ListGroup.Item as="li" className='sidebarFreind'>
-            <img className='sidebarFriendImg' src="/assets/persons/7.jpeg"/>
-            <span className='sidebarFreindName'> Jone Deb</span>
-          </ListGroup.Item>
-          <ListGroup.Item as="li" className='sidebarFreind'>
-            <img className='sidebarFriendImg' src="/assets/persons/6.jpeg"/>
-            <span className='sidebarFreindName'> Jone Deb</span>
-          </ListGroup.Item>
-          <ListGroup.Item as="li" className='sidebarFreind'>
-            <img className='sidebarFriendImg' src="/assets/persons/1.jfif"/>
-            <span className='sidebarFreindName'> Jone Deb</span>
-          </ListGroup.Item>
-          <ListGroup.Item as="li" className='sidebarFreind'>
-            <img className='sidebarFriendImg' src="/assets/persons/9.jpeg"/>
-            <span className='sidebarFreindName'> Jone Deb</span>
-          </ListGroup.Item>
+         {Users.map(u=>(
+           <ListGroup.Item as="li" className='sidebarFreind'>
+           <img className='sidebarFriendImg' src={u.profilePicture}/>
+           <span className='sidebarFreindName'>{u.username}</span>
+         </ListGroup.Item>
+         ))}
+     
       </ListGroup>
       </div>
     </div>

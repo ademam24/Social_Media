@@ -1,7 +1,8 @@
 .sidebar{
     height: Calc(120vh - 50px); 
+    position: sticky;
+    top:50px;
    
-       
 }
 ::-webkit-scrollbar{
     width:5px;

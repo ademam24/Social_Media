@@ -71,8 +71,15 @@ border-radius: 10px;
     align-items: center;
     padding: 10px 0;
 }
+.BottomItem{
+    margin-right: 10px;
+}
 .postBottomIcon{
     font-size: 1.7rem;
-    margin:0 20px;
+    margin:0 8px;
     cursor: pointer;
+}
+.IconText{
+    font-size:15px;
+    font-weight: 500;
 }

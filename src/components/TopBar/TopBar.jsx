@@ -10,6 +10,8 @@ import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+import { Link } from 'react-router-dom';
+
 
 
 export default function TopBar() {
@@ -40,8 +42,17 @@ export default function TopBar() {
      <Col md={4}>
      <div className="TopBarRight">
         <div className="topbarlinks">
+          
           <span className="topbarlink">HomePage</span>
+         
+          
           <span className="topbarlink">TimeLine</span>
+
+          
+          
+        
+          
+          
         
        </div>
         <div className="topbarIcons">

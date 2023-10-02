@@ -21,15 +21,29 @@ export default function Post(props) {
   const [state,setState] = useState({
     like:props.post.like,
     love:props.post.love,
+    dislike:false,
+    dislove:false,
+    
   });
+//  const [dislike,setDislike] = useState(false);
 
   useEffect(()=>{
    const handleLike =(e)=>{   
-    setState(prev =>({...prev, like:state.like+1}))
+    if(state.dislike === false){
+      setState(prev =>({...prev, dislike:!state.dislike, like:state.like+1, }));
+    }
+    else{
+      setState(prev =>({...prev, like:state.like-1, dislike:!state.dislike}));
+    }
+    
      
    }
    const handleLove= (e)=>{
-    setState(prev=>({...prev, love:state.love+1}))
+    if(state.dislove === false){
+      setState(prev=>({...prev, love:state.love+1,dislove:!state.dislove}))
+    }else{
+      setState(prev=>({...prev, love:state.love-1,dislove:!state.dislove}))
+    }
    }
    
 
@@ -40,50 +54,58 @@ export default function Post(props) {
     el.addEventListener('click',handleLike);
     ellov.addEventListener('click',handleLove);
   })
-  return (
-    <div className="Post">
-        <div className="postwrapper">
-            <div className="PostTop">
-                <div className="PostTopLeft">
-                    <img src={User[0].profilePicture} className='PostImag' alt=""/>
-                    <div className="psotDetails">
-                    <span className='PostName'>{User[0].username}</span>
-                    <div className="PostInfo">
-                    <span className="PostDate">{props.post.date}</span>
-                    <PublicIcon className='publicIcon'/>
-                    </div>
+  const HomePosts = ()=>{
+    return(
+      <div className="Post">
+      <div className="postwrapper">
+          <div className="PostTop">
+              <div className="PostTopLeft">
+                  <img src={User[0].profilePicture} className='PostImag' alt=""/>
+                  <div className="psotDetails">
+                  <span className='PostName'>{User[0].username}</span>
+                  <div className="PostInfo">
+                  <span className="PostDate">{props.post.date}</span>
+                  <PublicIcon className='publicIcon'/>
+                  </div>
 
-                    </div>
-                </div>
-                <div className="PostTopRight">
-                  <MoreVertIcon className='PostVertIcon'/>
-                  <CloseIcon/>
-                </div>
-            </div>
-            <div className="PostCenter">
-                <span className="postcentertext">{props.post?.desc}</span>
-                <img src={props.post.photo} className='CeneterImage' alt=""/>
-            </div>
-            <div className="PostBottom">
-               
-               <div className="BottomItem">
-                <a ref={ref} ><ThumbUpOffAltIcon   style={{color : "#0d6efd"}} className='postBottomIcon' alt=""/></a>
-             <span className='IconText' style={{color : "#0d6efd"}}>{state.like} Like</span>
-               </div>
-               <div className="BottomItem">
-              <a ref={lov}><FavoriteBorderIcon  style={{color:'red'}} className='postBottomIcon'/></a> 
-             <span className='IconText' style={{color:'red'}}>{state.love} Love</span>
-               </div> 
-               <div className="BottomItem">
-              <ChatBubbleIcon className='postBottomIcon' style={{color:'goldenrod'}}/> 
-             <span className='IconText' style={{color:'goldenrod'}} >30 Comments</span>
-               </div>
+                  </div>
+              </div>
+              <div className="PostTopRight">
+                <MoreVertIcon className='PostVertIcon'/>
+                <CloseIcon/>
+              </div>
+          </div>
+          <div className="PostCenter">
+              <span className="postcentertext">{props.post?.desc}</span>
+              <img src={props.post.photo} className='CeneterImage' alt=""/>
+          </div>
+          <div className="PostBottom">
+             
+             <div className="BottomItem">
+              <a ref={ref} ><ThumbUpOffAltIcon   style={{color : "#0d6efd"}} className='postBottomIcon' alt=""/></a>
+           <span className='IconText' style={{color : "#0d6efd"}}>{state.like} Like</span>
+             </div>
+             <div className="BottomItem">
+            <a ref={lov}><FavoriteBorderIcon  style={{color:'red'}} className='postBottomIcon'/></a> 
+           <span className='IconText' style={{color:'red'}}>{state.love} Love</span>
+             </div> 
+             <div className="BottomItem">
+            <ChatBubbleIcon className='postBottomIcon' style={{color:'goldenrod'}}/> 
+           <span className='IconText' style={{color:'goldenrod'}} >30 Comments</span>
+             </div>
 
 
-             <ShareIcon className='postBottomIcon'/>
-          
-      </div>
-        </div>
+           <ShareIcon className='postBottomIcon'/>
+        
     </div>
+      </div>
+  </div>
+    )
+  }
+  
+  return (
+   <>
+ <HomePosts/>
+   </>
   )
 }

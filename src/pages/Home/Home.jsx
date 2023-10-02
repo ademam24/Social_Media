@@ -19,7 +19,7 @@ export default function Home() {
       <Feed/>
       </Col>
       <Col md={3}>
-      <RightBar ad="assets/persons/ad.jfif"/>
+      <RightBar />
       </Col>
         </Row>
   

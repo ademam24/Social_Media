@@ -2,6 +2,7 @@
     height: Calc(120vh - 50px); 
     position: sticky;
     top:50px;
+    margin-top: 20px;
    
 }
 ::-webkit-scrollbar{

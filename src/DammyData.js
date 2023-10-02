@@ -27,7 +27,7 @@ export const Users = [
     {
       id:6,
       profilePicture: "assets/persons/6.jpeg",
-      username: "Shirley Beauchamp",
+      username: "Shirley Beaucha",
     },
     {
       id:7,
@@ -88,6 +88,7 @@ export const Users = [
       userId: 4,
       like: 7,
       comment: 3,
+      love: 0
       
     },
     {
@@ -135,6 +136,7 @@ export const Users = [
       userId: 9,
       like: 11,
       comment: 2,
+      love:0
     },
     {
       id: 10,
